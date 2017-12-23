@@ -6,10 +6,18 @@ app = express()
 
 db = new DB path.resolve __dirname, '../data'
 
-db.push 'lsl'
 
-PORT = process.env.PORT or 8000
+app = express()
 
-app.listen PORT
+PORT = process.env.PORT or 3000
 
-console.log 'Listening on ' + PORT + '!'
+app.get '/:num', (req, res) ->
+	file = db.files[req.params.num]
+	if file
+		res.send file
+	else
+		res.sendStatus 404
+
+app.listen 3000, ->
+	console.log('Example app listening on port 3000!');
+
