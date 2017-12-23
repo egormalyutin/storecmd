@@ -6,6 +6,7 @@
   "license": "MIT",
   "private": false,
   "dependencies": {
+    "express": "^4.16.2",
     "fs-extra": "^5.0.0",
     "micromatch": "^3.1.4",
     "path-type": "^3.0.0"
