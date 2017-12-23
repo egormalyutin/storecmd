@@ -68,9 +68,10 @@ class DB
 			get: (obj, prop) ->
 				obj[prop]
 			set: (obj, prop, value) ->
+				console.log obj, prop, value
 				obj[prop] = value
 				sf.write prop, value 
-				return obj[prop]
+				return value
 			deleteProperty: (obj, prop) ->
 				delete obj[prop]
 				sf._delete prop
@@ -91,6 +92,7 @@ class DB
 		fs.writeFileSync path.resolve(@path, DATA), JSON.stringify(@_data)
 
 	add: ->
+		console.log flat arguments
 		for file in flat arguments
 			@files[++@index] = file
 
