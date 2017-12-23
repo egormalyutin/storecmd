@@ -1,0 +1,13 @@
+{
+  "name": "storecmd",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "egorgl",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "fs-extra": "^5.0.0",
+    "micromatch": "^3.1.4",
+    "path-type": "^3.0.0"
+  }
+}
